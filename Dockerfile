@@ -20,7 +20,7 @@ RUN curl -L https://storage.googleapis.com/kubernetes-release/release/v1.11.5/bi
 # The image we keep
 FROM alpine:3.8
 
-RUN apk add --update --no-cache git ca-certificates
+RUN apk add --update --no-cache git ca-certificates bash
 
 COPY --from=build /tmp/linux-amd64/helm /bin/helm
 COPY --from=build /usr/local/bin/kubectl /usr/local/bin/kubectl
