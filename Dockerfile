@@ -18,7 +18,7 @@ RUN curl -L https://storage.googleapis.com/kubernetes-release/release/v1.11.5/bi
 
 
 # The image we keep
-FROM alpine:3.8
+FROM docker:stable
 
 RUN apk add --update --no-cache git ca-certificates bash gettext
 
