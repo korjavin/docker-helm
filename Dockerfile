@@ -12,7 +12,7 @@ RUN curl -L https://storage.googleapis.com/kubernetes-release/release/v1.11.5/bi
 # The image we keep
 FROM docker:stable
 
-RUN apk add --update --no-cache git ca-certificates bash gettext
+RUN apk add --update --no-cache git ca-certificates bash gettext curl
 
 COPY --from=build /usr/local/bin/helm /bin/helm
 COPY --from=build /usr/local/bin/kubectl /usr/local/bin/kubectl
