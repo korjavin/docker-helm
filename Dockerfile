@@ -5,7 +5,7 @@ WORKDIR /
 
 RUN apk add --update -t deps curl tar gzip bash openssl
 RUN  curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 && chmod 700 get_helm.sh && ./get_helm.sh
-RUN curl -L https://storage.googleapis.com/kubernetes-release/release/v1.11.5/bin/linux/amd64/kubectl > /usr/local/bin/kubectl && \
+RUN curl -L https://storage.googleapis.com/kubernetes-release/release/v1.21.2/bin/linux/amd64/kubectl > /usr/local/bin/kubectl && \
      chmod +x /usr/local/bin/kubectl
 
 
